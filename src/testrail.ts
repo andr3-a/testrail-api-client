@@ -5,7 +5,7 @@ import { TestRailOptions, TestRailResult } from "./testrail.interface";
 export class TestRailClient {
     private indexUri = "/index.php?";
     public uri: String = `${this.indexUri}/api/v2`;
-    private commonHeaders = { 'Content-Type': 'application/json', 'x-api-ident': 'beta' };
+    private commonHeaders = { 'Content-Type': 'application/json' };
 
     constructor(private options: TestRailOptions) {
         axios.defaults.baseURL = `https://${options.domain}`;
